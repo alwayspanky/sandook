@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PassActivity"
+    android:background="#f8f3eb">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/passToolbar"
+        android:layout_width="match_parent"
+        app:title="Passwords"
+        android:elevation="10dp"
+        app:titleMarginStart="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_pass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/passToolbar"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/pass_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_gravity="end|bottom"
+            android:backgroundTint="#f40552"
+            android:src="@drawable/add"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

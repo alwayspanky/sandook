@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="General">
+
+        <Preference
+            android:key="backup_key"
+            android:title="Backup And Restore"
+            android:summary="Take Backup and Restore of data"/>
+
+        <SwitchPreference
+            android:key="finger_key"
+            android:title="Fingerprint "
+            android:summary="Fingerprint Lock"/>
+
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:title="Developer Section">
+        <Preference
+            android:title="FAQ"
+            android:key="faq_key"
+            android:summary="Frequently asked questions"/>
+    <Preference
+        android:title="Policy"
+        android:key="privacy_key"
+        android:summary="Sandook policy "/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

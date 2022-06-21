@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity"
+    android:background="#f8f3eb">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/paymentToolbar"
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        app:titleMarginStart="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/paymentToolbar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardBackgroundColor="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/bank_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BANK ACCOUNT"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_paymentBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentToolbar"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/pass_layout"/>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardBackgroundColor="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/credit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_below="@id/bank_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREDIT CARD"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_paymentCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/pass_layout"/>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardBackgroundColor="#ffffff">
+
+        <LinearLayout
+            android:id="@+id/debit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_below="@id/debit_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEBIT CARD"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_paymentDebit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/pass_layout"/>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:fab_addButtonColorNormal="#f40552"
+            app:fab_addButtonPlusIconColor="@android:color/white"
+            app:fab_labelStyle="@style/menu_lable"
+            >
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_size="mini"
+                app:fab_colorNormal="@android:color/white"
+                app:fab_colorPressed="#f40552"
+                app:elevation="5dp"
+                app:fab_icon="@drawable/debitcard"
+                app:fab_title="Debit Card"
+                />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_size="mini"
+                app:fab_colorNormal="@android:color/white"
+                app:fab_colorPressed="#f40552"
+                app:elevation="5dp"
+                app:fab_icon="@drawable/credit_card"
+                app:fab_title="Credit Card"/>
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_size="mini"
+                app:fab_colorNormal="@android:color/white"
+                app:fab_colorPressed="#f40552"
+                app:elevation="5dp"
+                app:fab_icon="@drawable/bank_ac"
+                app:fab_title="Bank Account"/>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdActivity"
+    android:background="#f8f3eb">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/idToolbar"
+        android:layout_width="match_parent"
+        app:title="ID's"
+        android:elevation="10dp"
+        app:titleMarginStart="50dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/idCard_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ID CARD"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_IdCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:listitem="@layout/pass_layout"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/tax_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/idCard_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TAX"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_tax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:listitem="@layout/pass_layout"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/passport_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/tax_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PASSPORT"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_passport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:listitem="@layout/pass_layout"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/driving_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/passport_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DRIVING LICENSE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_driving"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:listitem="@layout/pass_layout"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="8dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardBackgroundColor="#ffffff">
+
+                <LinearLayout
+                    android:id="@+id/social_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:layout_below="@id/driving_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SOCIAL SECURITY"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_social"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:listitem="@layout/pass_layout"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fab_addButtonColorNormal="#f40552"
+        app:fab_addButtonPlusIconColor="@android:color/white"
+        app:fab_labelStyle="@style/menu_lable"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="#f40552"
+            app:elevation="5dp"
+            app:fab_icon="@drawable/id_card"
+            app:fab_title="Id card"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="#f40552"
+            app:elevation="5dp"
+            app:fab_icon="@drawable/driving"
+            app:fab_title="Driving License"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="#f40552"
+            app:elevation="5dp"
+            app:fab_icon="@drawable/passport"
+            app:fab_title="Passport"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_fab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="#f40552"
+            app:elevation="5dp"
+            app:fab_icon="@drawable/driving"
+            app:fab_title="PAN Card"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/id_fab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="#f40552"
+            app:elevation="5dp"
+            app:fab_icon="@drawable/social_security"
+            app:fab_title="Social Security"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialSecurityActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/socialToolbar"
+        android:layout_width="match_parent"
+        app:titleMarginStart="50dp"
+        android:elevation="10dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_below="@id/socialToolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/txtSocialName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/genderSocialSpinner"
+            android:entries="@array/Gender"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/txtSocialDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            />
+        <DatePicker
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/CountrySocialSpinner"
+            android:entries="@array/Country"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:textSize="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/pass_visibility">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtSocialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
